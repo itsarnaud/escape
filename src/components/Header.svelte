@@ -1,107 +1,82 @@
 <script>
+    import menu from '$lib/assets/burgermenu.svg'
     let menuOpen = false;
-    import menu from '$lib/assets/burgermenu.svg';
 
-    const toggleMenu = () => {
+    function toggleMenu() {
         menuOpen = !menuOpen;
     }
 </script>
 
 <header>
     <nav>
-        <h3>ESCAPE.</h3>
-        <button on:click={toggleMenu}><img src={menu} alt="burgerbutton"></button>
-        <div class="nav">
+        <div class="flex-nav">
+            <h3>ESCAPE.</h3>
+
+            <button class="burger" on:click={toggleMenu}>
+                <img src="{menu}" alt="menu burger">
+            </button>
+        </div>
+        <div class="nav {menuOpen ? 'open' : ''}">
             <a href="#carte" class="nav-elt"><span>Carte</span></a>
             <a href="#modele" class="nav-elt"><span>Modèle</span></a>
         </div>
+
+        
     </nav>
 </header>
 
 <style>
-    button {
-        background: none;
+    .burger {
+        background: transparent;
         border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 10;
     }
 
-    img {
-        height: 20px;
-    }
-
-    nav {
+    .nav {
+        opacity: 0;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        padding: 20px 30px;
+        justify-content: center;
+        gap: 5px;
     }
 
     h3 {
-        font-weight: 700;
         color: #617285;
-        font-size: 1.4em;
     }
 
-    .nav-elt {
-        position: relative;
-        margin: 0 10px;
-        font-size: 1.1em;
-        cursor: pointer;
-        color: #617285;
-        transition: .5s;
+    .nav.open {
+        opacity: 1;
+    }
 
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            border-radius: 10px;
-            width: 100%;
-            height: 2px;
-            background: #617285;
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform .4s ease-in-out;
+    .flex-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+        align-items: center;
+    }
+
+    .nav-elt span {
+        color: #617285;
+        font-size: large;
+    }
+
+    @media (min-width: 768px) {
+        .burger {
+            opacity: 0;
         }
 
-        &:hover {
-            &::after {
-                transform: scaleX(1);
-                transform-origin: left;
-            }
+        .nav {
+            top: 20px;
+            right: 20px;
+            position: absolute;
+            opacity: 1;
+            flex-direction: row;
+            gap: 15px;
         }
     }
 
-    /* nav a {
-        margin: 40% 10px;
-        font-size: x-large;
-        transform: translateX(20px);
-        cursor: pointer;
-        transition: .5s;
-        opacity: 0;
-
-        &::after {
-            position: absolute;
-            content: "";
-            top: 90%;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: #EDDBC7;
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.5s;
-            border-radius: 10px;
-        }
-
-        &:hover {
-            color: #EDDBC7;
-        }
-        
-        &:hover::after {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-    
-    } */
 </style>
