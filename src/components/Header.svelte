@@ -35,8 +35,7 @@
     }
 
     .nav {
-        opacity: 0;
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -48,7 +47,7 @@
     }
 
     .nav.open {
-        opacity: 1;
+        display: flex;
     }
 
     .flex-nav {
@@ -70,6 +69,7 @@
         }
 
         .nav {
+            display: flex;
             top: 20px;
             right: 20px;
             position: absolute;
