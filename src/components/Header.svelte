@@ -5,7 +5,6 @@
     const toggleMenu = () => {
         menuOpen = !menuOpen;
     }
-
 </script>
 
 <header>
@@ -20,6 +19,15 @@
 </header>
 
 <style>
+    button {
+        background: none;
+        border: none;
+    }
+
+    img {
+        height: 20px;
+    }
+
     nav {
         display: flex;
         flex-direction: row;
