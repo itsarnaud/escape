@@ -10,19 +10,22 @@
 <header>
     <nav>
         <div class="flex-nav">
-            <h3>ESCAPE.</h3>
+            <a href="/"><h3>ESCAPE.</h3></a>
 
             <button class="burger" on:click={toggleMenu}>
                 <img src="{menu}" alt="menu burger">
             </button>
 
-            <div class="nav {menuOpen ? 'open' : ''}">
-                <a href="#carte" class="nav-elt"><span>Carte</span></a>
-                <a href="#modele" class="nav-elt"><span>Modèle</span></a>
+            <div class="nav">
+                <a href="/#carte" class="nav-elt"><span>Carte</span></a>
+                <a href="/modele" class="nav-elt"><span>Modèle</span></a>
             </div>
         </div>
 
-        
+        <div id="close" class="nav {menuOpen ? 'open' : ''}">
+            <a href="/#carte" class="nav-elt"><span>Carte</span></a>
+            <a href="/modele" class="nav-elt"><span>Modèle</span></a>
+        </div>
     </nav>
 </header>
 
@@ -45,6 +48,11 @@
 
     h3 {
         color: #617285;
+        transition: .5s;
+        
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 
     .nav.open {
@@ -59,6 +67,32 @@
         align-items: center;
     }
 
+    .nav a {
+        cursor: pointer;
+        transition: .5s;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 95%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #617285;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s;
+            border-radius: 10px;
+        }
+        
+        &:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        
+    }
+
     .nav-elt span {
         color: #617285;
         font-size: large;
@@ -66,6 +100,10 @@
 
     @media (min-width: 768px) {
         .burger {
+            display: none;
+        }
+
+        #close {
             display: none;
         }
 

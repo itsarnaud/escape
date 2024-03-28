@@ -4,7 +4,7 @@
 
 <div class="test">
     <h3>Scandinavie.</h3>
-    <img src="{arrow}" alt="fleche">
+    <a href="/#carte"><img src="{arrow}" alt="fleche"></a>
 </div>
 
 <style>
@@ -31,6 +31,7 @@
         bottom: 20%;
         width: 20px;
         height: auto;
+        animation: glisse 2s ease infinite;
     }
 
     @media (min-width: 768px) {
@@ -58,6 +59,16 @@
 
         h3 {
             font-size: 2.8em;
+        }
+    }
+
+    @keyframes glisse {
+        0%, 100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(10px);
         }
     }
 
