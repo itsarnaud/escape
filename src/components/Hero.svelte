@@ -26,6 +26,13 @@
         font-size: 1.4em;
     }
 
+    img {
+        position: absolute;
+        bottom: 20%;
+        width: 20px;
+        height: auto;
+    }
+
     @media (min-width: 768px) {
         .test {
             border-radius: 1.4em;
@@ -36,7 +43,22 @@
         h3 {
             font-size: 1.9em;
         }
+
+        img {
+            width: 24px;
+            height: auto;
+        }
         
+    }
+
+    @media (min-width: 1440px) {
+        .test {
+            height: 85vh;
+        }
+
+        h3 {
+            font-size: 2.8em;
+        }
     }
 
 </style>

@@ -15,10 +15,11 @@
             <button class="burger" on:click={toggleMenu}>
                 <img src="{menu}" alt="menu burger">
             </button>
-        </div>
-        <div class="nav {menuOpen ? 'open' : ''}">
-            <a href="#carte" class="nav-elt"><span>Carte</span></a>
-            <a href="#modele" class="nav-elt"><span>Modèle</span></a>
+
+            <div class="nav {menuOpen ? 'open' : ''}">
+                <a href="#carte" class="nav-elt"><span>Carte</span></a>
+                <a href="#modele" class="nav-elt"><span>Modèle</span></a>
+            </div>
         </div>
 
         
@@ -65,17 +66,31 @@
 
     @media (min-width: 768px) {
         .burger {
-            opacity: 0;
+            display: none;
         }
 
         .nav {
             display: flex;
-            top: 20px;
-            right: 20px;
-            position: absolute;
-            opacity: 1;
             flex-direction: row;
             gap: 15px;
+        }
+
+        h3 {
+            font-size: 1.3em;
+        }
+    }
+
+    @media (min-width: 1440px) {
+        h3 {
+            font-size: 1.8em;
+        }
+
+        .nav-elt span {
+            font-size: 1.2em;
+        }
+
+        .flex-nav{
+            padding: 30px;
         }
     }
 
