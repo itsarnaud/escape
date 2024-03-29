@@ -6,6 +6,8 @@
     import Footer from '../../components/Footer.svelte';
 
     let container;
+    let isLoading = true;
+    let startTime;
 
     onMount(async () => {
         const scene = new THREE.Scene();
@@ -18,10 +20,14 @@
         renderer.setSize(container.clientWidth, container.clientHeight);
         container.appendChild(renderer.domElement);
 
+        startTime = performance.now();
         const loader = new GLTFLoader();
         console.log('ça charge...');
         loader.load('https://langskip.s3.eu-west-3.amazonaws.com/landskip.glb', function(gltf) {
-            console.log("Ça marche !!");
+            let endTime = performance.now();
+            let loadingTime = (endTime - startTime) / 1000;
+            console.log(`Le modèle a fini de charger en ${loadingTime} secondes.`);
+            isLoading = false;
             obj = gltf.scene;
             scene.add( obj );
         }, undefined, function ( error ) {
@@ -51,6 +57,9 @@
 
 <Header />
 <div class="container">
+    {#if isLoading}
+        <p>Chargement du modèle en cours. Cela peux prendre plusieurs minutes selon votre connexion internet...</p>
+    {/if}
     <div class="iframe" bind:this={container}></div>
     <h3>Le Langskip</h3>
 </div>
