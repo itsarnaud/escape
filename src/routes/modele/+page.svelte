@@ -19,7 +19,7 @@
         container.appendChild(renderer.domElement);
 
         const loader = new GLTFLoader();
-        loader.load('/landskip.glb', function(gltf) {
+        loader.load('https://langskip.s3.eu-west-3.amazonaws.com/landskip.glb', function(gltf) {
             console.log("Ça marche !!");
             obj = gltf.scene;
             scene.add( obj );
