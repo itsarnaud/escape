@@ -40,7 +40,7 @@
         const animate = function() {
             requestAnimationFrame(animate);
             if (obj) {
-                obj.rotation.y += 0.01; // changez cette valeur pour ajuster la vitesse de rotation
+                obj.rotation.y += 0.005;
             }
             renderer.render(scene, camera);
         };
@@ -58,7 +58,7 @@
 <Header />
 <div class="container">
     {#if isLoading}
-        <p>Chargement du modèle en cours. Cela peux prendre plusieurs minutes selon votre connexion internet...</p>
+        <p style="text-align: center; padding: 0 10px">Chargement du modèle en cours. Cela peux prendre plusieurs minutes selon votre connexion internet...</p>
     {/if}
     <div class="iframe" bind:this={container}></div>
     <h3>Le Langskip</h3>
