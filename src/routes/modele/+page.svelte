@@ -73,7 +73,7 @@
     <p>Construit selon des méthodes ancestrales, le Langskip était constitué de planches superposées, renforcées par des rivets en fer. Cette technique, le bordage à clin, lui conférait une solidité à toute épreuve, défiant les tempêtes les plus féroces.</p>
     <p>La voile, initialement négligée, devint rapidement un élément crucial de la navigation viking à bord du Langskip. Permettant d'exploiter les vents pour accélérer les déplacements, elle fut adoptée en complément des rameurs réguliers.</p>
     <p>Doté d'une quille, innovation majeure, le Langskip pouvait naviguer avec stabilité et précision, même dans les eaux les plus agitées. Cette pièce de bois, fixée sous la coque, assurait une meilleure tenue de cap et facilitait les manœuvres.</p>
-    <p>À bord du Langskip, les Vikings ont tracé des routes commerciales à travers l'Europe, bravant les éléments pour découvrir de nouveaux horizons. Leur héritage perdure, le Langskip demeurant le témoin immuable de leur courage et de leur ténacité marins.</p>
+    <p>À bord du Langskip, les Vikings ont tracé des routes commerciales à travers l'Europe, bravant les éléments pour découvrir de nouveaux horizons. Leur héritage perdure, le Langskip demeurant le témoin immuable de leur courage et de leur ténacité marine.</p>
 </div>
 <Footer />
 
