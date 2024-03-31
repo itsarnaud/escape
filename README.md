@@ -8,7 +8,7 @@ ESCAPE. est un projet universitaire où le but est de concevoir une carte intera
 
 Ce projet combine les fonctionnalités de Svelte et Three.js pour créer une application web interactive qui affiche un modèle 3D dans le navigateur. Le modèle 3D est chargé à partir d'un fichier GLB (format de fichier 3D) et est rendu dans une scène 3D utilisant les fonctionnalités de Three.js. L'interface utilisateur réactive est construite avec Svelte, ce qui permet une manipulation facile des états et des composants de l'application.
 
-⚠️ Veuillez noter que le modèle 3D peut prendre un certain temps à s'afficher dans la scène 3D en fonction de la taille du fichier GLB et de la vitesse de votre connexion Internet. Cela est dû au processus de chargement et de rendu du modèle 3D dans la scène, ainsi qu'à la complexité du modèle lui-même. ⚠️
+⚠️ Veuillez noter que le modèle 3D peut prendre un certain temps à s'afficher dans la scène 3D en fonction de la vitesse de votre connexion Internet. Cela est dû au processus de chargement et de rendu du modèle 3D dans la scène, ainsi qu'à la complexité du modèle lui-même. ⚠️
 
 ## Fonctionnalités
 
