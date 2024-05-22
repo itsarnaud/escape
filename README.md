@@ -33,8 +33,6 @@ npm install
 
 4.  Start the application by running the following command:
 
-bashCopy code
-
 ```
 npm run dev
 ```
